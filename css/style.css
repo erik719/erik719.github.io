@@ -1,0 +1,567 @@
+/* Tilbakestill alle marginer, padding og bruk boksmodellen for alle elementer */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Stil for overskriften (header) */
+.fullsize{
+    width: 100%; /* Full bredde */
+    height: 100vh; /* Høyde er 100% av viewport-høyden */
+}
+
+/* Stil for hele siden (body) med en bakgrunnsgradient og et bakgrunnsbilde */
+.bakgrunnsbilde {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(../img/oslomet-logo-graavegg-2400x1200.jpg);
+    /* Bakgrunn med en gradient og et bilde */
+    background-size: cover; /* Skalering av bakgrunnen for å dekke hele vinduet */
+    background-repeat: no-repeat; /* Ingen repetisjon av bakgrunnsbildet */
+    background-attachment: fixed; /* Bakgrunnen er festet og scroller ikke med innholdet */
+}
+
+/* Stil for navigasjonsmenyen (navbar) */
+nav {
+    width: 100%; /* Full bredde */
+    height: 100px; /* Høyde på 100 piksler */
+    color: white; /* Tekstfarge hvit */
+    display: flex; /* Bruker Flexbox for layoutkontroll */
+    justify-content: space-around; /* Fordeler plasseringen av elementer jevnt rundt */
+    align-items: center; /* Sentrerer elementer vertikalt i navbar */
+    font-family: sans-serif; /* Bruker en generisk sans-serif skrifttype */
+}
+.nav-spisesteder{
+    width: 100%; /* Full bredde */
+    height: 100px; /* Høyde på 100 piksler */
+    color: white; /* Tekstfarge hvit */
+    display: flex; /* Bruker Flexbox for layoutkontroll */
+    justify-content: space-around; /* Fordeler plasseringen av elementer jevnt rundt */
+    align-items: center; /* Sentrerer elementer vertikalt i navbar */
+    font-family: sans-serif; /* Bruker en generisk sans-serif skrifttype */
+    background-color: #000000e3;
+}
+
+/* Stil for logoen */
+.logo {
+    width: 10vw; /* Bredde basert på viewport-bredde (10%) */
+    margin-left: 0; /* Null margintilpasning til venstre */
+}
+
+.logo a::before {
+    content: ''; /* Inneholdet er tomt (brukes for visuell effekt) */
+    position: absolute; /* Absolutt posisjonering i forhold til lenken */
+    top: 0; /* Plasserer øverst i lenken */
+    left: 0; /* Plasserer til venstre i lenken */
+    width: 0%; /* Startbredden er 0% */
+    border-top: 7px;  /* 7 piksler tykkelse */
+    border-top-color: rgb(154,205,50);/* Lysegrønn bunnkant */
+    border-top-style: solid;/* en rett solid linje */
+    transition: 0.4s linear; /* Overgangseffekt over 0.4 sekunder (lineær bevegelse) */
+}
+
+/* Stil for pseudo-elementet 'before' i lenkene ved hover-tilstand */
+.logo a:hover:before {
+width: 100%; /* Bredden utvides til 90% under lenkens ord ved hover-tilstand */
+}
+
+/* Stil for artikkel-elementer */
+article {
+    padding: 2rem; /* 2 rem (fontstørrelse) padding på alle sider */
+    margin-top: 0.5rem;/* 0.5 rem margin øverst for avstand fra andre elementer */
+    color:rgba(36,37,38);/* Tekstfarge i en lys kremfarge med gjennomsiktighet */
+    border-radius: 10px; /* Avrundede hjørner med radius på 10 piksler */
+}
+/* id for tre infobokser i siden "topical.html" */
+#infoboks-1{
+    background-color: rgb(256,212,4); /* gul bakgrunnsfarge i boksen*/
+}
+#infoboks-2{
+    background-color:rgb(207, 122, 24);/* oransje bakgrunnsfarge i boksen*/
+}
+#infoboks-3{
+    background-color: rgb(255, 255, 255); /* hvit bakgrunnsfarge i boksen*/
+}
+/* Stil for overskrift (h2) innenfor artikkel-elementer */
+article > h2 {
+    margin-bottom: 1rem; /* 1 rem bunnmargin for avstand fra påfølgende innhold */
+}
+.testimg-size{
+    margin-top: 0.5rem;/* 0.5 rem margin øverst for avstand fra andre elementer */
+    width:100%;
+}
+
+/* Stil for overskrift (h2) generelt */
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Skriftfamilie */
+    font-size: 1.7rem; /* Skriftstørrelse på 1.7 rem (fontstørrelse) */
+}
+
+/* Stil for overskrift (h3) generelt */
+h3 {
+    font-family: 'Calibri', 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Skriftfamilie */
+    font-weight: 520; /*Skrift tykkelse gjør det mer tilpasset for brukeren */
+}
+
+/* Stil for lenker i menyen */
+.meny a {
+    text-decoration: none; /* Ingen tekstdekorasjon */
+    color: white; /* Tekstfarge hvit */
+    padding: 10px 20px; /* 10 piksler padding på topp og bunn, 20 piksler på sider */
+    font-size: 2vw; /* Skriftstørrelse basert på viewport-bredde (vw) for skalering */
+    position: relative; /* Relativ posisjonering for å legge til pseudo-elementer */
+}
+
+/* Stil for pseudo-elementet 'before' i lenkene */
+.meny a:before {
+    content: ''; /* Inneholdet er tomt (brukes for visuell effekt) */
+    position: absolute; /* Absolutt posisjonering i forhold til lenken */
+    top: 0; /* Plasserer øverst i lenken */
+    left: 0; /* Plasserer til venstre i lenken */
+    width: 0%; /* Startbredden er 0% */
+    height: 100%; /* Full høyde av lenken */
+    border-bottom: 2px solid yellow; /* Gul bunnkant med 2 piksler tykkelse */
+    transition: 0.4s linear; /* Overgangseffekt over 0.4 sekunder (lineær bevegelse) */
+}
+
+/* Stil for pseudo-elementet 'before' i lenkene ved hover-tilstand */
+.meny a:hover:before {
+    width: 90%; /* Bredden utvides til 90% under lenkens ord ved hover-tilstand */
+}
+
+
+/* Stil for lenker i tilgjengelighetsseksjonen */
+.tilgjengelighet a {
+    text-decoration: none; /* Ingen tekstdekorasjon */
+    color: white; /* Tekstfarge hvit */
+    padding: 10px 20px; /* 10 piksler padding på topp og bunn, 20 piksler på sider */
+    font-size: 2vw; /* Skriftstørrelse basert på viewport-bredde (vw) for skalering */
+    background: yellowgreen; /* Bakgrunnsfarge i gulgrønn */
+    border-radius: 8px; /* Avrundede hjørner med radius på 8 piksler */
+    transition: 0.4s; /* Overgangseffekt på 0.4 sekunder for jevne overganger */
+}
+
+/* Stil for lenker i tilgjengelighetsseksjonen ved hover-tilstand */
+.tilgjengelighet a:hover {
+    background: transparent; /* Gjennomsiktig bakgrunn ved hover */
+    border: 1px solid yellow; /* Legger til en gul kant ved hover-tilstand */
+}
+
+/* Stil for overskriftsteksten */
+.heading-text {
+    max-width: 650px; /* Maksimal bredde på 650 piksler for tekstboksen */
+    position: absolute; /* Absolutt posisjonering for nøyaktig plassering */
+    top: 50%; /* Plasserer tekstboksen vertikalt på midten */
+    left: 50%; /* Plasserer tekstboksen horisontalt på midten */
+    transform: translate(-50%, -50%); /* Sentrerer tekstboksen nøyaktig */
+    text-align: center; /* Sentrerer teksten horisontalt */
+    color: white; /* Tekstfarge hvit */
+}
+
+/* Stil for span-elementer innenfor overskriftsteksten */
+.heading-text span {
+    letter-spacing: 5px; /* Øker avstanden mellom bokstaver med 5 piksler */
+}
+
+/* Stil for overskrift (h1) innenfor overskriftsteksten */
+.heading-text h1 {
+    font-size: 3.5vw; /* Skriftstørrelse basert på viewport-bredde (vw) for skalering */
+}
+
+
+/* Stil for lenker i overskriftsteksten */
+.heading-text a {
+    text-decoration: none; /* Fjerner understreking fra lenker */
+    background-color: yellowgreen; /* Bakgrunnsfarge i gulgrønn */
+    color: white; /* Skriftfarge hvit */
+    padding: 10px 20px; /* 10 piksler padding på topp og bunn, 20 piksler på sider */
+    letter-spacing: 5px; /* Øker avstanden mellom bokstaver med 5 piksler */
+    transition: 0.4s; /* Overgangseffekt på 0.4 sekunder for jevne overganger */
+}
+
+/* Stil for lenker i overskriftsteksten ved hover-tilstand */
+.heading-text a:hover {
+    background: transparent; /* Gjennomsiktig bakgrunn ved hover */
+    border: 1px; /*1px tykk kant ved hover tilstand*/
+    border-style: solid; /*en solid rett strek*/
+    border-color:  yellow; /*gul farget kant*/
+}
+
+/* Stil for kontaineren som inneholder kortene */
+.kort-container {
+    display: flex; /* Bruker Flexbox for layoutkontroll */
+    background-color: #ffffff; /* Hvit bakgrunnsfarge for kontaineren */
+    justify-content: center; /* Sentrerer kortene horisontalt i kontaineren */
+    flex-wrap: wrap; /* Tillater kortene å gå til neste rad ved behov */
+    margin-top: 100px; /* Legger til 100 piksler margin øverst for å justere plassering */
+}
+
+
+/* Stil for kortinnhold */
+.kort {
+    width: 325px; /* Bredde på 325 piksler */
+    background-color: #f0f0f0; /* Bakgrunnsfarge i lys grå */
+    border-radius: 8px; /* Avrundede hjørner med radius på 8 piksler */
+    overflow: hidden; /* Skjuler innhold som overskrider kortets ramme */
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2); /* Skyggeeffekt med offset og farge */
+    margin: 20px; /* 20 piksler margin på alle sider for å lage avstand mellom kortene */
+}
+
+/* Stil for bilder inne i kortene */
+.kort img {
+    width: 100%; /* Skalerer bildet til å passe innenfor kortets bredde */
+    height: 67%; /* Auto-justering av høyde for å bevare bildets proporsjoner */
+}
+
+
+/* tilpasser kort innholdet i de tre paragrafene slik 
+at det ser fint ut */
+
+/* Stil for kortinnhold */
+.kort-innhold {
+    padding: 16px; /* 16 piksler padding på alle sider */
+}
+
+/* Stil for overskrift (h3) i kortinnhold */
+.kort-innhold h3 {
+    font-size: 28px; /* Skriftstørrelse på 28 piksler */
+    margin-bottom: 8px; /* Bunnmargin på 8 piksler for avstand under overskriften */
+}
+
+/* Stil for vanlig tekst (p) i kortinnhold */
+.kort-innhold p {
+    color: #666; /* Tekstfarge i grå (#666) */
+    font-size: 15px; /* Skriftstørrelse på 15 piksler */
+    line-height: 1.3; /* Linjehøyde 1.3 for bedre lesbarhet */
+}
+
+/* Stil for lenker i kortinnhold med tilpasset dekorasjon */
+.kort-innhold .kort-link {
+    display: inline-block; /* Viser lenken som en blokk */
+    padding: 8px 16px; /* 8 piksler padding på topp og bunn, 16 piksler på sider */
+    background-color: #155b25; /* Bakgrunnsfarge i mørk grønn */
+    text-decoration: none; /* Ingen underliggende dekorasjon (f.eks., understreking) */
+    border-radius: 4px; /* Avrundede hjørner med radius på 4 piksler */
+    margin-top: 16px; /* Øker avstanden fra toppen med 16 piksler */
+    color: #ffffff; /* Skriftfargen er hvit */
+}
+
+/* Stil for kontaktinformasjonselementet */
+.contact-in {
+    width: 60%; /* Bredde på 60% av foreldrelementet */
+    height: auto; /* Automatisk høyde for innholdet */
+    margin: auto; /* Sentrert horisontalt */
+    display: flex; /* Bruker Flexbox for layoutkontroll */
+    flex-wrap: wrap; /* Tillater innholdet å gå til neste rad ved behov */
+    padding: 10px; /* 10 piksler padding på alle sider */
+    border-radius: 10px; /* Avrundede hjørner med radius på 10 piksler */
+    background: #fff; /* Hvit bakgrunnsfarge */
+    box-shadow: 0px 0px 10px 0px #666; /* Skyggeeffekt med offset og farge */
+    font-family: 'Poppins', sans-serif; /* Bruker skrifttypen 'Poppins' og fallback til generisk sans-serif */
+}
+
+/* Stiler for .contact-map-elementet */
+.Kontakt-kart {
+    width: 100%; /* Setter bredden til 100% av foreldrelementet */
+    height: auto; /* Justerer høyden automatisk for å opprettholde elementets proporsjoner */
+    flex: 50%; /* Bruker flexbox med en andel på 50% for fleksibel plassering */
+}
+
+.Kontakt-Skjema { /* Style kontaktskjema*/
+    width: 100%;
+    height: auto;
+    flex: 50%; /*setter den til 50%, slik at de kommer ved siden av hverandre*/
+    padding: 30px; /*avstand mellom dem er 30px*/
+    text-align: center;/*teksten  'Kontakt oss' er sentrert*/
+}  
+.Kontakt-Skjema h1 {
+    margin-bottom: 10px; /*margin mellom kontaks oss og 'navn input boks'*/
+} 
+.Kontakt-Skjema-txt {
+    width: 100%;
+    height: 40px; /*høyden til input boks*/
+    color: #000;/*svart linje rundt*/
+    border: 1px;/*1px tykk kant*/
+    border-style: solid; /*en solid rett strek*/
+    border-color:  #bcbcbc; /*hvit farget kant*/
+    border-radius: 50px; /*avrunder kanter*/
+    /* Fjerner fokusrammen, setter bunnmargen til 20px og legger til 15px padding */
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+/* Endrer farge på plassholder-teksten til grå (#aaa) i .contact-form-txt */
+.Kontakt-Skjema::placeholder {
+    color: #000000;
+}
+
+/* Stil for tekstområdet i kontaktskjema */
+.Kontakt-Skjema-txtOmråde {
+    width: 100%; /* Full bredde */
+    height: 130px; /* Fast høyde på 130 piksler */
+    color: #000; /* Tekstfarge er svart */
+    border: 1px;/* 1px tykk kant */
+    border-style: solid; /*en solid rett strek*/
+    border-color:  #bcbcbc; /*hvit farget kant*/
+    border-radius: 50px; /* Avrundede hjørner med radius på 50 piksler */
+    outline: none; /* Fjerner fokusrammen */
+    margin-bottom: 20px; /* Bunnmargin på 20 piksler */
+    padding: 15px; /* 15 piksler padding på alle sider */
+    font-family: 'Poppins', sans-serif; /* Bruker skrifttypen 'Poppins' og fallback til generisk sans-serif */
+}
+
+
+/* Stil for knappen i kontaktskjema */
+.Kontakt-Skjema-link {
+    width: 100%; /* Full bredde */
+    border: none; /* Ingen ramme */
+    outline: none; /* Fjerner fokusrammen */
+    border-radius: 50px; /* Avrundede hjørner med radius på 50 piksler */
+    background: rgb(6, 106, 29); /* Bakgrunnsfarge i grønn */
+    text-transform: uppercase; /* Konverterer tekst til store bokstaver */
+    padding: 10px 0; /* 10 piksler padding på topp og bunn, 0 på sider */
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere at det er klikkbart */
+    font-size: 18px; /* Skriftstørrelse på 18 piksler */
+    color: white; /* whit tekstfarge */
+}
+
+/* Stil for Google Maps-container */
+/* 1vw tilsvarer 1% av skjermens synlig skjermbredde */
+.google-maps {
+    padding-top: 2%; /* 2% øverst for ekstra mellomrom */
+    background-color: white; /* Hvit bakgrunnsfarge */
+    padding-bottom: 5%; /* 2% nederst for ekstra mellomrom */
+}
+
+/* Stil for informasjon om spisesteder */
+.info-spisesteder {
+    margin-top: 5vw; /* 5% marg fra toppen relativt til viewport-bredde */
+    margin-left: 15vw; /* 15% marg fra venstre relativt til viewport-bredde */
+    margin-right: 15vw; /* 15% marg fra høyre relativt til viewport-bredde */
+    font-size: larger; /* Større skriftstørrelse */
+    line-height: 40px; /* Linjehøyde på 40 piksler */
+    letter-spacing: 2px; /* Bokstavavstand på 2 piksler */
+}
+
+/* Kroppsstil */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Skrifttype for kroppen */
+    font-size: 1rem; /* Grunnleggende skriftstørrelse på 1 rem */
+    margin: 0px; /* Fjern standardmargin */
+}
+
+/* Stil for adressekoblinger */
+.adresse-link {
+    color: #2d57b1d0; /* Sett fargen på adressekoblinger */
+}
+
+
+/* Stil for hovedbeholderen */
+.Kontainer-hovedbeholder {
+    padding: 2rem; /* Luftplass rundt innholdet */
+    background-color: #fff; /* Bakgrunnsfarge */
+}
+
+/* Synlighetsområde for sliderinnholdet */
+.slider-synlighet {
+    position: relative; /* Relativ posisjon for innholdet */
+    max-width: 55rem; /* Maksimumsbredde for innholdet */
+    margin: 0 auto; /* Sentrering av synlighetsområdet */
+}
+
+/* Stil for selve bildeslideren */
+.slider {
+    display: flex; /* Viser bildene i en rad */
+    aspect-ratio: 16/9; /* Sideforhold 16:9 for bildene */
+    overflow-x: auto; /* Horisontal rulling for bilder som går utover bredden */
+    scroll-snap-type: x mandatory; /* Rulling av bilder med "snap" */
+    scroll-behavior: smooth; /* Smidig rulling mellom bilder */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); /* Skyggeeffekt for slideren */
+    border-radius: 0.5rem; /* Avrundede hjørner for slideren */
+}
+
+/* Bilder i slideren */
+.slider img {
+    flex: 1 0 100%; /* Bilder strekker seg for å fylle sliderens bredde */
+    scroll-snap-align: start; /* Bilder ruller til starten av synlighetsområdet */
+    object-fit: cover; /* Bilder tilpasses og dekker hele bildeområdet */
+}
+
+/* Definerer stilen for elementet med klassenavn "p.utforsk" */
+p.utforsk {
+    background-color: #fff; /* Setter bakgrunnsfargen til hvit */
+    text-align: center; /* Sentrerer teksten innenfor elementet */
+    font-family: sans-serif; /* Velger skriftfamilien til sans-serif */
+    text-decoration: none; /* Fjerner eventuell understrekning/dekorasjon på lenker (selv om dette gjelder vanligvis for lenker, kan det være brukt for å unngå understrekning på teksten) */
+    font-size: 2.5vw; /* Angir størrelsen på skriften relativt til visningsvinduets bredde */
+    padding-top: 3.5rem; /* Legger til en øvre padding på 3.5rem for å skape mellomrom mellom innholdet og toppen av elementet, det ser bedre ut med luft */
+    padding-bottom: 1rem; /* Legger til en nedre padding på 1.7rem for å skape mellomrom mellom innholdet og bunnen av elementet */
+    letter-spacing: 0.2vw; /* Angir avstanden mellom bokstavene relativt til visningsvinduets bredde */
+}
+
+/* Stiler for det første bildet */
+img.bilde-index {
+    max-width: 50%;        /* Setter maksimal bredde for bildet til 50% av beholderen */
+    min-width: 320px;      /* Setter minimumsbredde for bildet til 320 piksler */
+    float: left;           /* Flyter bildet til venstre, slik at tekst kan omslutte det */
+    border-radius: 10px;   /* Bruker en border-radius på 10 piksler, som skaper avrundede hjørner */
+    margin-right: 1.5rem;  /* Setter høyre marg til å lage plass mellom bildet og andre elementer */
+}
+
+/* Stiler for det første tekstområdet */
+.tekst-område1 {
+    background-color: #fff;    /* Setter bakgrunnsfargen til tekstområdet til hvit */
+    margin-top: 100px;         /* Setter toppmarg til å skape plass over tekstområdet */
+    margin-bottom: 150px;      /* Setter bunnmarg til å skape plass under tekstområdet */
+    width: 70%;                /* Setter bredden til tekstområdet til 70% av beholderen */
+    margin-left: 15%;          /* Setter venstremarg til å sentrere tekstområdet i beholderen */
+}
+main {
+    background-color: white;
+}
+/* Stiler for teksten innenfor det første tekstområdet */
+.text-boks {
+    color: black;          /* Setter teksten til svart */
+}
+
+.text-boks h2 {
+    font-size: 42px;          /* Setter skriftstørrelsen for overskrift til 42 piksler */
+}
+
+.text-boks p {
+    font-size: 16px;          /* Setter skriftstørrelsen for avsnitt til 16 piksler */
+    margin-top: 0.2rem;       /* Setter toppmarg for avsnitt for å finjustere avstanden */
+    letter-spacing: 0.1vw;    /* Setter avstand mellom bokstavene til 0.1 visuell breddeenhet */
+    font-family: sans-serif;  /* Bruker en sans-serif skrifttype */
+}
+
+/* Stiler for det andre bildet */
+img.bilde-index2 {
+    max-width: 50%;        /* Setter maksimal bredde for bildet til 50% av beholderen */
+    min-width: 320px;      /* Setter minimumsbredde for bildet til 320 piksler */
+    float: right;          /* Flyter bildet til høyre */
+    margin-left: 1rem;     /* Setter venstremarg for å lage plass mellom bildet og andre elementer */
+    border-radius: 10px;   /* Bruker en border-radius på 10 piksler, som skaper avrundede hjørner */
+}
+
+/* Stiler for det andre tekstområdet */
+.tekst-område2 {
+    background-color: #fff;    /* Setter bakgrunnsfargen til tekstområdet til hvit */
+    margin-top: 200px;         /* Setter toppmarg for å skape plass over tekstområdet */
+    margin-bottom: 150px;      /* Setter bunnmarg for å skape plass under tekstområdet */
+    width: 70%;                /* Setter bredden til tekstområdet til 70% av beholderen */
+    margin-left: 15%;          /* Setter venstremarg for å sentrere tekstområdet i beholderen */
+}
+
+/* Stiler for teksten innenfor det andre tekstområdet */
+.text-boks2 {
+    color: black;             /* Setter teksten til svart */
+}
+
+.text-boks2 h2 {
+    font-size: 42px;          /* Setter skriftstørrelsen for overskrift til 42 piksler */
+}
+
+.text-boks2 p {
+    font-size: 16px;          /* Setter skriftstørrelsen for avsnitt til 16 piksler */
+    margin-top: 0.2rem;       /* Setter toppmarg for avsnitt for å finjustere avstanden */
+    letter-spacing: 0.1vw;    /* Setter avstand mellom bokstavene til 0.1 visuell breddeenhet */
+    font-family: sans-serif;  /* Bruker en sans-serif skrifttype */
+}
+
+
+
+/* Stil for footer-elementet */
+footer {
+    background-color: #111; /* Setter bakgrunnsfargen for footer */
+}
+
+/* Stil for beholderen innenfor footer */
+.footerKontainer {
+    width: 100%; /* Gjør beholderen like bred som forelder-elementet sitt */
+    padding: 70px 30px 20px; /* Setter padding for beholderen (topp, høyre, bunn) */
+}
+
+/* Stil for beholderen til sosiale medieikoner */
+.sosialeMediaIkoner {
+    display: flex; /* Bruker flexbox for layout */
+    justify-content: center; /* Sentrerer barneelementene horisontalt */
+}
+
+/* Stil for lenkene til sosiale medieikoner */
+.sosialeMediaIkoner a {
+    text-decoration: none; /* Fjerner understreking fra lenkene */
+    padding: 10px; /* Legger til padding rundt ikonene */
+    background-color: white; /* Setter bakgrunnsfarge for ikonene */
+    margin: 10px; /* Legger til margin rundt ikonene */
+    border-radius: 50%; /* Gjør ikonene sirkulære ved å sette border-radius til 50% */
+}
+
+/* Stil for selve sosiale medieikonene */
+.sosialeMediaIkoner a i {
+    font-size: 2em; /* Setter fontstørrelse for ikonene */
+    color: black; /* Setter fargen på ikonene */
+    opacity: 0.9; /* Setter gjennomsiktighet for ikonene */
+}
+
+/* Hover-effekt på sosiale medieikoner */
+.sosialeMediaIkoner a:hover {
+    background-color: #111; /* Endrer bakgrunnsfargen ved hover */
+    transition: 0.5s; /* Legger til overgangseffekt med varighet 0.5 sekunder */
+}
+.sosialeMediaIkoner a:hover i {
+    color: white; /* Endrer fargen på ikonene til hvitt ved hover */
+    transition: 0.5s; /* Legger til overgangseffekt med varighet 0.5 sekunder */
+}
+
+/* Stil for footer-navigasjonsfeltet */
+.footerNavbar {
+    margin: 30px 0; /* Legger til marging (avstand) over og under navigasjonsfeltet */
+}
+.footerNavbar ul {
+    display: flex; /* Bruker flexbox for layout */
+    justify-content: center; /* Sentrerer lenkene horisontalt */
+    list-style: none; /* Fjerner punkter for listen */
+}
+.footerNavbar ul li a {
+    color: white; /* Setter fargen på lenkene til hvitt */
+    margin: 20px; /* Legger til margin rundt lenkene */
+    text-decoration: none; /* Fjerner understreking fra lenkene */
+    font-size: 1.3em; /* Setter fontstørrelse til 1.3em */
+    opacity: 0.7; /* Setter gjennomsiktighet til 0.7 */
+    transition: 0.5s; /* Legger til overgangseffekt med varighet 0.5 sekunder */
+}
+.footerNavbar ul li a:hover {
+    opacity: 1; /* Endrer gjennomsiktighet til 1 ved hover */
+}
+
+/* Stil for nedre del av footer */
+.footerNedreDel {
+    background-color: #000; /* Setter bakgrunnsfargen til svart */
+    padding: 20px; /* Legger til padding (fyll) rundt innholdet */
+    text-align: center; /* Sentrerer teksten */
+}
+.footerNedreDel p {
+    color: white; /* Setter teksten til hvitt */
+}
+
+/* Stil for designer-informasjonen */
+.designer {
+    opacity: 0.7; /* Setter gjennomsiktighet til 0.7 */
+    text-transform: uppercase; /* Gjør teksten til store bokstaver */
+    letter-spacing: 1px; /* Legger til litt avstand mellom bokstavene */
+    font-weight: 400; /* Setter font-weight til 400 (normal) */
+    margin: 0px 5px; /* Legger til margin (avstand) rundt teksten */
+}
+
+/* Bruker media query for å gjøre footer responsiv på små skjermer */
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column; /* Endrer retningen til kolonne ved lav skjermstørrelse */
+    }
+    .footerNav ul li {
+        width: 100%; /* Gjør lenkene like brede som forelder-elementet */
+        text-align: center; /* Sentrerer lenkene horisontalt */
+        margin: 10px; /* Legger til margin (avstand) rundt lenkene */
+    }
+}
