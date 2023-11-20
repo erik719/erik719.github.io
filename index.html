@@ -4,78 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Oslomet landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hjem</title>
 </head>
 <body class="bakgrunnsbilde">
-    <header class="fullsize">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="../img/oslomet.svg" alt="logo"></a>
-            </div>
-            <div class="meny">
-                <a href="index.html">Hjem</a>
-                <a href="topical.html">Info</a>
-                <a href = "canteen.html">Kantine</a>
-            </div>
-            <div class = "tilgjengelighet">
-                <a href = "accessibility.html">Tilgjengelighet</a>
-            </div>
-
-        </nav>
-        <plass1 class = "heading-text">
-        <span>Oslomet</span>
-       <h1>Samspill mellom teknologi og samfunn</h1>
+        <!-- Header-seksjon som inneholder navigasjon og overskrift -->
+        <header class="fullsize">
+            <!-- Navigasjonsside med logo og meny -->
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="../img/OsloMet.svg" alt="logo"></a>
+                </div>
+                <div class="meny">
+                    <!-- Navigasjonsmenylenker -->
+                    <a href="index.html">Hjem</a>
+                    <a href="topical.html">Info</a>
+                    <a href="canteen.html">Kantine</a>
+                </div>
+                <div class="tilgjengelighet">
+                    <!-- Tilgjengelighetslenke -->
+                    <a href="accessibility.html">Tilgjengelighet</a>
+                </div>
+            </nav>
+            <!-- Overskrift og undertittel-seksjon -->
+            <plass1 class="heading-text">
+                <span>Oslomet</span>
+                <h1>Utforsk tilgjengelighet på Oslomet</h1>
+                <br>
+                <!-- Lenke for oppfordring til handling -->
+                <a href="accessibility.html">Trykk her</a>
+            </plass1>
+        </header>
         
-        </plass1>
-    </header>
-    <article id="infoboks-1">
-        <h2>Introduksjon mellom tittel</h2>
-        <h3>I dag er den globale infrastrukturen til internett i stor grad avhengig av fysiske undervanns- og underjordiske kabler. 
-            Til tross for internetts globale natur, gjør selve det faktum at det er avhengig av fysiske kabler at informasjonsflyten noen ganger er underlagt nasjonale grenser. 
-            Et ferskt eksempel på dette er den nye norske e-loven (2020),
-            som foreslår at etterretningstjenesten kan overvåke og samle inn all data som går over riksgrensen.
-            Ettersom samfunnet blir stadig mer digitalisert, 
-            kan internettkabler også sees på som kritisk infrastruktur. 
-            Internett-kabler, både i Nordsjøen og kysten av Taiwan,
-            er mistenkt for å ha blitt sabotert med vilje. 
-            Anslagsvis 2,5 milliarder mennesker i verden har ennå ikke tilgang til internett.
-            For å overvinne de fysiske begrensningene til internettkabler, 
-            jobber selskaper som Starlink og EU med å tilby internettilgang via satellitter. 
-            Elon Musks Starlink er i dag den største globale leverandøren av satellittinternett med
-            over 4500 satellitter i bane. 
-            De forventer å ha 42.000 nye i bane de neste årene.
-        </h3>
+        <div class="kort-container">
+            <!-- Kortseksjon -->
+            <div class="kort">
+                <img src="../img/hio11.jpg" alt = "Bildet av kantine">
+                <div class="kort-innhold">
+                    <h3>Kantine</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi aperiam tempora, 
+                        molestias, illum incidunt quidem quasi eos saepe suscipit distinctio magni natus maiores odio rem 
+                        atque perspiciatis consectetur dolore.
+                    </p>
+                    <a href="../html/canteen.html" class="kort-link">Les Mer</a>
+                </div>
+            </div>
+            <div class="kort">
+                <img src="../img/kafe-andrea.jpg" alt = "bilde av infosenter">
+                <div class="kort-innhold">
+                    <h3>Info</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi aperiam tempora, 
+                        molestias, illum incidunt quidem quasi eos saepe suscipit distinctio magni natus maiores odio rem 
+                        atque perspiciatis consectetur dolore.
+                    </p>
+                    <a href="../html/topical.html" class="kort-link">Les Mer</a>
+                </div>
+            </div>
+            <div class="kort">
+                <img src="../img/hio11.jpg" alt = "bildet av tilgjengelighet på oslomet">
+                <div class="kort-innhold">
+                    <h3>Tilgjengelighet</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium eligendi aperiam tempora, 
+                        molestias, illum incidunt quidem quasi eos saepe suscipit distinctio magni natus maiores odio rem 
+                        atque perspiciatis consectetur dolore.
+                    </p>
+                    <a href="accessibility.html" class="kort-link">Les Mer</a>
+                </div>
+            </div>
+        </div>
+        <!-- Tekst for Slidebar -->
+        <p class = "utforsk">Utforsk Oslomet, prøv slidebaren nede</p>
 
-    </article>
-    <article id="infoboks-2">
-        <h2>Aktuelt tema</h2>
-        <h3>Problemstillingen er relevant for samfunnet fordi bruk av satellitter kan gi flere mennesker tilgang til internett. 
-            Samtidig har en endring av måten vi leverer internett til verden på konsekvenser for kommunikasjon, datasikkerhet, personvern, miljø og vårt verdigrunnlag. 
-            Vi ser for oss at bruk av satellitter kan påvirke datasikkerhet når vi henter og deler informasjon over nettverk. 
-            Det setter spørsmål ved deling av informasjon som kan hackes. 
-            Ifølge Marcin Frackie Wicz (2023) fra TS2 Space, 
-            kan signaler til og fra satellittene bli jammet og kan lede til «data breeches, identity theft, and other forms of cybercrime... 
-            used to track the movement of individuals, raising serious privacy concerns” (para 2). 
-            Dermed må vi f. eks forsikre oss om at kvaliteten på internettforbindelser ikke blir dårligere ved bruk av satellitter.
-        </h3>
+        <!-- Oppretter en hovedbeholder for Slidebaren -->
+        <main>
+        <section class="Kontainer-hovedbeholder">
+            <div class="slider-synlighet">
+                <div class="slider">
+                    <!-- Bilder i slideren -->
+                    <img id="slide-1" src="../img/OsloMet utsiktsbilde 2400 x 1200.jpg" alt="Oslomet utsiktsbilde">     
+                    <img id="slide-2" src="../img/OsloMet Studiestart 2400 x 1200.jpg" alt="Oslomet studiestart Santhanshaugen">
+                    <img id="slide-3" src="../img/P32-N002.107 bilde 3.jpg" alt="Auditorium">
+                    <img id="slide-4" src="../img/OsloMet-Makerspace-2400x1200px-CC2CA1A7-6242-47BF-8985-E2F79105985B_1_105_c.jpg" alt="Oslomet Makerspace">
+                </div>
+            </div>
+            </section>
+        <!-- Oppretter et tekstområde med bilde ved bruk av section -->
+        <section class = "tekst-område1">
+            <img class = "bilde-index" src="../img/OsloMet-Makerspace-2400x1200px-CC2CA1A7-6242-47BF-8985-E2F79105985B_1_105_c.jpg" alt = "bilde av makerspace">
+            <div class = "text-boks">
+                <h2>Er du interessert i teknologi, sjekk ut Makerspace! </h2>
+                <p>Makerspace fremmer kreativitet, utforskertrang og tverrfaglig
+                     samarbeid. Vi tilbyr mikrokurs og valgemner i kreative teknologifag. 
+                     Her kan studenter og ansatte ved 
+                    OsloMet møtes for å idémyldre, dele kunnskap og samarbeide. </p>
+            </div>
+        </section>
 
-    </article>
-    <article id="infoboks-3">
-        <h2> Teknologi som dilemma</h2>
-        <h3>Vi mener at samfunnet har potensial til å bli bedre fordi
-             flere mennesker kan mye lettere få tilgang til internett uten store endringer i infrastruktur
-            som kommer av å grave ned kabler. 
-            Flere får tilgang til mer informasjon og kan kommunisere innad i og
-            på tvers av landegrenser på en mer effektiv måte. 
-            I tillegg så er det et framskritt i retning av mer avansert teknologi. 
-            Hvis vi kan bruke denne teknologien på en trygg måte, 
-            hvor vi klarer å minimere truslene for datasikkerhet og miljø, 
-            eller at det medfører konsekvenser for politikk, 
-            så fører dette til at samfunnet kan få god nytte av teknologien. 
-            Universell Internettilgang har ikke nødvendigvis kun positive virkninger for alle, 
-            sett i lys av de mulige negative sidene av problemstillingene vi har diskutert i modulen. 
-        </h3>
+        <!-- Oppretter et annet tekstområde med bilde ved bruk av section -->
+        <section class = "tekst-område2">
+            <img class = "bilde-index2" src="../img/bokhylle-2400x1200px.jpg" alt = "bilde av Bøker">
+            <div class = "text-boks2">
+                <h2>Oslomet har fått et nytt bibliotek på P48! </h2>
+                <p>Biblioteket P48 pusses opp ut januar 2024.
+                     Les mer om alternative arbeidsplasser,
+                     e-bøker, innlevering, bestilling av bøker og status i arbeidet.
+                     Som student eller ansatt kan du bruke bibliotekene nesten døgnet rundt. 
+                     Husk kort og kode utenfor betjent åpningstid. 
+                      </p>
+            </div>
+        </section>
+        
 
-    </article>
+<!-- hele google maps og kontakt oss er inni denne div klassen,
+     har lagd denne for å sette bakgrunnsfargen til hvit,
+    fordi i body har vi lagt til et bilde som bakgrunnsbilde -->
+<div class = "google-maps"> 
+     <div class="contact-in">
+        <div class="Kontakt-kart">
+            <!-- Denne linken er hentet fra google maps, den er autogenerert -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7998.4940167956765!2d10.724360943959402!3d59.92179555439851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416fe476bb6a77%3A0x9ece5245a8cfbbb2!2sOsloMet%20-%20Fakultet%20for%20l%C3%A6rerutdanning%20og%20internasjonale%20studier!5e0!3m2!1sno!2sno!4v1699391974460!5m2!1sno!2sno"
+                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Her skulle det vært kart av Oslomet på googlemaps"></iframe>
+        </div>
+        <div class="Kontakt-Skjema">
+            <h1>Kontakt oss</h1>
+            <form>
+                <input type="text" placeholder="Navn" class="Kontakt-Skjema-txt" />
+                <input type="text" placeholder="E-mail" class="Kontakt-Skjema-txt" />
+                <textarea placeholder="Melding" class="Kontakt-Skjema-txtOmråde"></textarea>
+                <input type="submit" value="Submit" class="Kontakt-Skjema-link" />
+            </form>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer>
+<div class = "footerKontainer">
+    <div class = "sosialeMediaIkoner">
+        <a href = ""><i class = "fa-brands fa-facebook"></i></a>
+        <a href = ""><i class = "fa-brands fa-instagram"></i></a>
+        <a href = ""><i class = "fa-brands fa-twitter"></i></a>
+        <a href = ""><i class = "fa-brands fa-google-plus"></i></a>
+        <a href = ""><i class = "fa-brands fa-youtube"></i></a>
+    </div>
+</div>
+<div class = "footerNavbar">
+    <ul>
+        <li><a href = "../html/index.html">Hjem</a></li>
+        <li><a href = "../html/accessibility.html">Tilgjengelighet</a></li>
+        <li><a href = " ">kontakt Oss</a></li>
+    </ul>
+</div>
+<div class = "footerNedreDel">
+    <p>Copyright &copy;2023; Designet av <span class = "designer">Oslomet</span></p>
+</div>
+</footer>
+
 </body>
 </html>
