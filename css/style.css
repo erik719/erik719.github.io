@@ -171,7 +171,7 @@ h3 {
 /* Stil for lenker i overskriftsteksten */
 .heading-text a {
     text-decoration: none; /* Fjerner understreking fra lenker */
-    background-color: yellowgreen; /* Bakgrunnsfarge i gulgrønn */
+    background-color: rgb(81, 110, 22); /* Bakgrunnsfarge i gulgrønn */
     color: white; /* Skriftfarge hvit */
     padding: 10px 20px; /* 10 piksler padding på topp og bunn, 20 piksler på sider */
     letter-spacing: 5px; /* Øker avstanden mellom bokstaver med 5 piksler */
