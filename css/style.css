@@ -135,7 +135,7 @@ h3 {
     color: white; /* Tekstfarge hvit */
     padding: 10px 20px; /* 10 piksler padding på topp og bunn, 20 piksler på sider */
     font-size: 2vw; /* Skriftstørrelse basert på viewport-bredde (vw) for skalering */
-    background: yellowgreen; /* Bakgrunnsfarge i gulgrønn */
+    background: rgb(112, 150, 35); /* Bakgrunnsfarge i gulgrønn */
     border-radius: 8px; /* Avrundede hjørner med radius på 8 piksler */
     transition: 0.4s; /* Overgangseffekt på 0.4 sekunder for jevne overganger */
 }
